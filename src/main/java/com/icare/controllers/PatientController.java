@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.icare.beans.PatientBean;
+import com.icare.entities.PatientBean;
 import com.icare.exceptions.NoDataFoundException;
 import com.icare.exceptions.PatientServiceException;
 import com.icare.services.PatientService;
@@ -33,13 +33,19 @@ public class PatientController {
 	@Autowired
 	private VisitService visitService;
 
+	@ModelAttribute("patient")
+	public PatientBean getPatientBean() {
+		return new PatientBean();
+	}
+
 	@RequestMapping(value = "add", method = RequestMethod.GET)
 	public String renderAddPatient() {
 		return ViewNames.RegisterPatient.name();
 	}
 
-	@RequestMapping(value = "save", method = RequestMethod.POST)
-	public String addPatient(PatientBean patientBean, Model model) {
+	@RequestMapping(value = "register")
+	public String addPatient(@ModelAttribute PatientBean patientBean,
+			Model model) {
 		try {
 			patientService.save(patientBean);
 			model.addAttribute(MessageConstants.MESSAGE,

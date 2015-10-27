@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `patient`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mrdNo` int(11) DEFAULT NULL,
+  `mrdNo` VARCHAR(15) DEFAULT NULL,
   `name` varchar(150) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `sex` varchar(6) DEFAULT NULL,

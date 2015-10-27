@@ -104,7 +104,7 @@ repositories {
 dependencies {
 	compile spring.datajpa,spring.core,spring.web,spring.webmvc,spring.security,commons.collections
 	compile jodatime,hibernate.core,hibernate.entitymanager,servletApi,itextpdf,itextxml
-	compile commons.fileupload,javax.jstl,javax.el
+	compile commons.fileupload,javax.jstl,javax.el,commons.io
 	compile mysql,fasterXml.databind,fasterXml.jsonprovider
     testCompile testng,jmock.core,jmock.legacy,spring.test
 }

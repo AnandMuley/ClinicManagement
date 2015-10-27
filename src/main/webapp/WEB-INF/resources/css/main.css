@@ -58,3 +58,7 @@
 	border: solid 1px;
 	border-color: #BCBCBC;
 }
+
+.disabled{
+	color: gray !important;
+}

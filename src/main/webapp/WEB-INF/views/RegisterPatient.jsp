@@ -12,8 +12,7 @@
 		<%@include file="Header.jsp"%>
 		<br>
 		<h3 class="text-info text-center">Register New</h3>
-		<form action="save" method="post">
-			<input type="hidden" name="id" value="${patient.id}"/>
+		<form action="register" method="post" enctype="multipart/form-data">
 			<div align="center">
 				<div class="row">
 					<div class="col-md-3"></div>
@@ -35,10 +34,10 @@
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-4">
-								<input max="200" maxlength="3" value="${patient.age}" class="form-control input-group-lg" name="age" placeholder="Age" />
+								<input max="200" maxlength="3" class="form-control input-group-lg" value="${patient.age}" name="age" placeholder="Age" />
 							</div>
 							<div class="col-md-4">
-								<select name="sex" class="form-control input-group-lg" value="${patient.sex}">
+								<select value="${patient.sex}" name="sex" class="form-control input-group-lg">
 									<option value="Sex">Sex</option>
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
@@ -49,17 +48,17 @@
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="address" placeholder="Address" cols="" rows="3">${patient.address}</textarea>
+								<textarea class="form-control input-group-lg" name="address" placeholder="Address" cols="" rows="3"></textarea>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" value="${patient.contactNo}" name="contactNo" placeholder="Contact No"/>
+								<input class="form-control input-group-lg" name="contactNo" placeholder="Contact No"/>
 							</div>
 							<div class="col-md-4">
-								<select name="referredBy" class="form-control input-group-lg" value="${patient.referredBy}">
+								<select name="referredBy" class="form-control input-group-lg">
 									<option value="RefBy">RefBy</option>
 									<option value="DoctorA">DoctorA</option>
 									<option value="DoctorB">DoctorB</option>
@@ -70,24 +69,24 @@
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" value="${patient.fees}" name="fees" placeholder="Fees"/>
+								<input class="form-control input-group-lg" name="fees" placeholder="Fees"/>
 							</div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" value="${patient.procedureFees}" name="procedureFees" placeholder="Procedure Fees"/>
+								<input class="form-control input-group-lg" name="procedureFees" placeholder="Procedure Fees"/>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="diseaseHistory" placeholder="Disease History" cols="" rows="3">${patient.diseaseHistory}</textarea>
+								<textarea class="form-control input-group-lg" name="diseaseHistory" placeholder="Disease History" cols="" rows="3"></textarea>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="allergies" placeholder="Allergies" cols="" rows="3">${patient.allergies}</textarea>
+								<textarea class="form-control input-group-lg" name="allergies" placeholder="Allergies" cols="" rows="3"></textarea>
 							</div>
 						</div>
 						<br />

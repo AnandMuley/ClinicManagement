@@ -1,18 +1,27 @@
-package com.icare.beans;
+package com.icare.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "patient", schema = "icare")
 public class PatientBean {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private int mrdNo;
+	private String mrdNo;
 	private String name;
 	private int age;
 	private String sex;
 	private String address;
-	private long contactNo;
+	private String contactNo;
 	private String referredBy;
-	private double fees;
-	private double procedureFees;
+	private Integer fees;
+	private Integer procedureFees;
 	private String diseaseHistory;
 	private String allergies;
 
@@ -24,11 +33,11 @@ public class PatientBean {
 		this.id = id;
 	}
 
-	public int getMrdNo() {
+	public String getMrdNo() {
 		return mrdNo;
 	}
 
-	public void setMrdNo(int mrdNo) {
+	public void setMrdNo(String mrdNo) {
 		this.mrdNo = mrdNo;
 	}
 
@@ -64,11 +73,11 @@ public class PatientBean {
 		this.address = address;
 	}
 
-	public long getContactNo() {
+	public String getContactNo() {
 		return contactNo;
 	}
 
-	public void setContactNo(long contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
 
@@ -80,19 +89,19 @@ public class PatientBean {
 		this.referredBy = referredBy;
 	}
 
-	public double getFees() {
+	public Integer getFees() {
 		return fees;
 	}
 
-	public void setFees(double fees) {
+	public void setFees(Integer fees) {
 		this.fees = fees;
 	}
 
-	public double getProcedureFees() {
+	public Integer getProcedureFees() {
 		return procedureFees;
 	}
 
-	public void setProcedureFees(double procedureFees) {
+	public void setProcedureFees(Integer procedureFees) {
 		this.procedureFees = procedureFees;
 	}
 

@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.icare.entities.PatientEntity;
+import com.icare.entities.PatientBean;
 
-public interface PatientRepository extends JpaRepository<PatientEntity, Integer> {
+public interface PatientRepository extends JpaRepository<PatientBean, Integer> {
 
-	List<PatientEntity> findByNameContaining(String name);
+	List<PatientBean> findByNameContaining(String name);
 
 }
