@@ -62,3 +62,19 @@
 .disabled{
 	color: gray !important;
 }
+
+.links{
+	cursor: pointer;
+}
+
+.editBtn{
+	color: #deb73d;
+}
+
+.deleteBtn{
+	color: #bd1e13;
+}
+
+.opdpaper{
+	color: #2e6fe3;
+}

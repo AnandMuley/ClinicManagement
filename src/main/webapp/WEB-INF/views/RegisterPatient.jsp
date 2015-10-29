@@ -13,6 +13,7 @@
 		<br>
 		<h3 class="text-info text-center">Register New</h3>
 		<form action="register" method="post" enctype="multipart/form-data">
+			<input name="id" value="${patient.id}" type="hidden"/>
 			<div align="center">
 				<div class="row">
 					<div class="col-md-3"></div>
@@ -37,7 +38,7 @@
 								<input max="200" maxlength="3" class="form-control input-group-lg" value="${patient.age}" name="age" placeholder="Age" />
 							</div>
 							<div class="col-md-4">
-								<select value="${patient.sex}" name="sex" class="form-control input-group-lg">
+								<select name="sex" class="form-control input-group-lg">
 									<option value="Sex">Sex</option>
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
@@ -48,14 +49,14 @@
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="address" placeholder="Address" cols="" rows="3"></textarea>
+								<textarea class="form-control input-group-lg" name="address" placeholder="Address" cols="" rows="3">${patient.address}</textarea>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" name="contactNo" placeholder="Contact No"/>
+								<input class="form-control input-group-lg" name="contactNo" placeholder="Contact No" value="${patient.contactNo}"/>
 							</div>
 							<div class="col-md-4">
 								<select name="referredBy" class="form-control input-group-lg">
@@ -69,24 +70,24 @@
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" name="fees" placeholder="Fees"/>
+								<input value="${patient.fees}" class="form-control input-group-lg" name="fees" placeholder="Fees"/>
 							</div>
 							<div class="col-md-4">
-								<input class="form-control input-group-lg" name="procedureFees" placeholder="Procedure Fees"/>
+								<input value="${patient.procedureFees}" class="form-control input-group-lg" name="procedureFees" placeholder="Procedure Fees"/>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="diseaseHistory" placeholder="Disease History" cols="" rows="3"></textarea>
+								<textarea class="form-control input-group-lg" name="diseaseHistory" placeholder="Disease History" cols="" rows="3">${patient.diseaseHistory}</textarea>
 							</div>
 						</div>
 						<br />
 						<div class="row">
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
-								<textarea class="form-control input-group-lg" name="allergies" placeholder="Allergies" cols="" rows="3"></textarea>
+								<textarea class="form-control input-group-lg" name="allergies" placeholder="Allergies" cols="" rows="3">${patient.allergies}</textarea>
 							</div>
 						</div>
 						<br />

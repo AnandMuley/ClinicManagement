@@ -12,10 +12,10 @@ public class PatientBean {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private Integer id;
 	private String mrdNo;
 	private String name;
-	private int age;
+	private Integer age;
 	private String sex;
 	private String address;
 	private String contactNo;
@@ -25,11 +25,11 @@ public class PatientBean {
 	private String diseaseHistory;
 	private String allergies;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -49,11 +49,11 @@ public class PatientBean {
 		this.name = name;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

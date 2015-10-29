@@ -55,8 +55,9 @@
 							<td>${patient.address}</td>
 							<td>
 								<div align="center">
-									<button type="button" title="${patient.id}" class="btn-link editBtn">Edit</button>
-									<button type="button" title="${patient.id}" class="btn-link deleteBtn">Delete</button>
+									<div title="Edit" id="edit${patient.id}" class="fa fa-pencil-square-o editBtn links"></div>
+									<div title="Delete" id="del${patient.id}" class="glyphicon glyphicon-trash deleteBtn links"></div>
+									<div title="OPD Case Paper" id="opdcasepaper${patient.id}" class="fa fa-file-text opdpaper links"></div>
 								</div>
 							</td>
 						</tr>
