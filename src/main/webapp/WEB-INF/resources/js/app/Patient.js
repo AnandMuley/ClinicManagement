@@ -16,7 +16,7 @@ $(document).ready(function(){
 	$('.opdpaper').click(function(event){
 		var patId = parseInt(event.target.id.substr(12));
 		$('#pid').val(patId);
-		$('#editPatientFrm').attr('action','opdcasepaper');
+		$('#editPatientFrm').attr('action','../opdpaper');
 		$('#editPatientFrm').submit();
 	});
 	

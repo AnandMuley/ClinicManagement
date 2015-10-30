@@ -1,37 +1,17 @@
-package com.icare.entities;
+package com.icare.dtos;
 
-import javax.persistence.Convert;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.icare.constants.EyeType;
-import com.icare.converters.EyeTypeConverter;
 
-@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @Component
-@Entity
-@Table(schema = "icare", name = "opdcasepaper")
-public class OpdCasePaperBean {
+public class OpdCasePaperDto {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Convert(converter = EyeTypeConverter.class)
 	private EyeType eyeType;
 
-	@ManyToOne(targetEntity = PatientBean.class)
-	@JoinColumn(name = "PatientId")
-	private PatientBean patientBean;
+	private PatientDto patientDto;
 
 	private String vision;
 	private String pinHole;
@@ -59,12 +39,12 @@ public class OpdCasePaperBean {
 		this.eyeType = eyeType;
 	}
 
-	public PatientBean getPatientBean() {
-		return patientBean;
+	public PatientDto getPatientDto() {
+		return patientDto;
 	}
 
-	public void setPatientBean(PatientBean patientBean) {
-		this.patientBean = patientBean;
+	public void setPatientDto(PatientDto patientDto) {
+		this.patientDto = patientDto;
 	}
 
 	public String getVision() {
@@ -141,8 +121,8 @@ public class OpdCasePaperBean {
 
 	@Override
 	public String toString() {
-		return "OpdCasePaperBean [id=" + id + ", eyeType=" + eyeType
-				+ ", patientBean=" + patientBean + ", vision=" + vision
+		return "OpdCasePaperDto [id=" + id + ", eyeType=" + eyeType
+				+ ", patientDto=" + patientDto + ", vision=" + vision
 				+ ", pinHole=" + pinHole + ", vaNear=" + vaNear + ", iot="
 				+ iot + ", nct=" + nct + ", sac=" + sac + ", sle=" + sle
 				+ ", fundus=" + fundus + ", diagnosis=" + diagnosis + "]";
