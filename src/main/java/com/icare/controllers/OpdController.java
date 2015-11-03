@@ -33,6 +33,7 @@ public class OpdController {
 			@ModelAttribute("pid") Integer patientId) {
 		ModelAndView modelAndView = new ModelAndView(ViewNames.CasePaper.name());
 		PatientBean patientBean = patientService.findById(patientId);
+		opdService.searchCasePaper(patientBean);
 		modelAndView.addObject("patient", patientBean);
 		return modelAndView;
 	}
@@ -40,9 +41,8 @@ public class OpdController {
 	@RequestMapping(value = "save", method = RequestMethod.POST)
 	public ModelAndView saveDetails(
 			@ModelAttribute("patientDto") PatientDto patientDto) {
-		ModelAndView modelAndView = new ModelAndView(ViewNames.CasePaper.name());
 		opdService.saveDetails(patientDto);
-		return modelAndView;
+		return viewOpdCasePaper(patientDto.getId());
 	}
 
 }

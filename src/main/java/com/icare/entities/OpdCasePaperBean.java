@@ -28,11 +28,9 @@ public class OpdCasePaperBean {
 
 	@Convert(converter = EyeTypeConverter.class)
 	private EyeType eyeType;
-
 	@ManyToOne(targetEntity = PatientBean.class)
-	@JoinColumn(name = "PatientId")
+	@JoinColumn(name = "PatientId", nullable = false)
 	private PatientBean patientBean;
-
 	private String vision;
 	private String pinHole;
 	private String vaNear;

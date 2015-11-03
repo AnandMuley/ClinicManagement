@@ -29,6 +29,7 @@ public class BeanCreatorUtil {
 		opdCasePaperBean.setSle(opdCasePaperDto.getSle());
 		opdCasePaperBean.setVaNear(opdCasePaperDto.getVaNear());
 		opdCasePaperBean.setVision(opdCasePaperDto.getVision());
+		opdCasePaperBean.setId(opdCasePaperDto.getId());
 		return opdCasePaperBean;
 
 	}

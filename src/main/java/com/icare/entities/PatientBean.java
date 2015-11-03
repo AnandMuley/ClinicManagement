@@ -1,10 +1,14 @@
 package com.icare.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "patient", schema = "icare")
@@ -24,6 +28,8 @@ public class PatientBean {
 	private Integer procedureFees;
 	private String diseaseHistory;
 	private String allergies;
+	@Transient
+	private List<OpdCasePaperBean> casePaperBeans = new ArrayList<OpdCasePaperBean>();
 
 	public Integer getId() {
 		return id;
@@ -119,6 +125,10 @@ public class PatientBean {
 
 	public void setAllergies(String allergies) {
 		this.allergies = allergies;
+	}
+
+	public List<OpdCasePaperBean> getCasePaperBeans() {
+		return casePaperBeans;
 	}
 
 	@Override

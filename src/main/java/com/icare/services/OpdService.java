@@ -43,4 +43,10 @@ public class OpdService {
 		opdRepository.save(casePaperBeans);
 	}
 
+	public void searchCasePaper(PatientBean patientBean) {
+		List<OpdCasePaperBean> casePapers = opdRepository
+				.findByPatientId(patientBean.getId());
+		patientBean.getCasePaperBeans().addAll(casePapers);
+	}
+
 }
