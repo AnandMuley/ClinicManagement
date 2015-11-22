@@ -14,7 +14,7 @@
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OPD<span class="caret"></span></a>
 				<ul class="dropdown-menu">
-					<li><a href="${pageContext.request.contextPath}/opd/casepaper">OPD Case Paper</a></li>
+					<%-- <li><a href="${pageContext.request.contextPath}/opd/casepaper">OPD Case Paper</a></li> --%>
 					<%-- <li><a href="${pageContext.request.contextPath}/patient/add">Lasik Case Paper</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">Contact Lens Shop</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">Medical Certificate</a></li> --%>
