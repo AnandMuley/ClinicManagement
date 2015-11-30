@@ -94,3 +94,9 @@
 .label-text{
 	font-weight: bold;
 }
+
+.pres-text-label{
+	text-align: right;
+	color: #44708F;
+	font-weight: bold;
+}
