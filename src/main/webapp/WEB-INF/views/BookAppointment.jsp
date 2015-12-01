@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Book Appointment</title>
 <%@include file="Include.jsp"%>
 </head>
 <body>
@@ -15,30 +15,97 @@
 	<div align="center">
 		<form id="createAppointmentFrm" action="#" method="get">
 		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-12 appointment-text-label">Name</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-6 appointment-text-label">Age</div>
+					<div class="col-md-6 appointment-text-label">Sex</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+					</div>
+					<div class="col-md-6">
+								<select name="sex" class="form-control input-group-lg">
+									<option value=""></option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-6 appointment-text-label">ContactNo</div>
+					<div class="col-md-6 appointment-text-label">Date</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+					</div>
+					<div class="col-md-6">
+						<input required="required" type="date" class="form-control input-group-lg" ng-model="appointment.datedOn" placeholder="For Date"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-12 appointment-text-label">Address</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<textarea class="form-control input-group-lg" rows="3" cols="40"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-6 appointment-text-label">Consultant</div>
+					<div class="col-md-6 appointment-text-label">Referred By</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+					</div>
+					<div class="col-md-6">
+								<select name="sex" class="form-control input-group-lg">
+									<option value=""></option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-3"></div>	
 			<div class="col-md-6">
-				<div class="row">
-					<div class="col-md-6">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.firstName" placeholder="First Name"/>
-					</div>
-					<div class="col-md-6">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.lastName" placeholder="Last Name"/>
-					</div>
-				</div>
-				<br/>
-				<div class="row">
-					<div class="col-md-6">
-						<input maxlength="10" required="required" type="tel" class="form-control input-group-lg" ng-model="appointment.mobileNo" placeholder="Mobile No"/>
-					</div>
-					<div class="col-md-6">
-						<input type="email" class="form-control input-group-lg" ng-model="appointment.emailId" placeholder="EmailId"/>
-					</div>
-				</div>
 				<br/>
 				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-6">
-						<input required="required" type="date" class="form-control input-group-lg" ng-model="appointment.datedOn" placeholder="For Date"/>
 					</div>
 				</div>
 				<br/>

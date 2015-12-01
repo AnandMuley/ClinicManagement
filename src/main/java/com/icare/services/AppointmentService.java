@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.icare.dtos.AppointmentDto;
 import com.icare.repositories.PatientRepository;
 
 @Service
@@ -16,4 +17,8 @@ public class AppointmentService {
 	@Autowired
 	private PatientRepository patientDao;
 
+	public void createNew(AppointmentDto appointmentDto){
+		
+	}
+	
 }
