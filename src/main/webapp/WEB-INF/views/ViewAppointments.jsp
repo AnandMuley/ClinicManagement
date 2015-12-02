@@ -21,6 +21,12 @@
 		</div>
 	</div>
 	<br/>
+	<c:if test="${fn:length(searchResults.appointments)==0}">
+		<div class="row">
+			<div class="col-md-12" align="center">No appointments !</div>
+		</div>
+	</c:if>
+	<c:if test="${fn:length(searchResults.appointments)>0}">
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
@@ -93,6 +99,7 @@
 					</table>
 		</div>
 	</div>
+	</c:if>
 		<!-- Modal -->
 		<div id="appointmentsModal" class="modal fade" role="dialog">
 			<div class="modal-dialog modal-md">

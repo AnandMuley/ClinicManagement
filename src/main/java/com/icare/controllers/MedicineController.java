@@ -6,18 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.icare.dtos.MedicineDto;
 import com.icare.services.MedicineService;
+import com.icare.utils.ViewNames;
 
 @Controller
 @RequestMapping(value = "medicine")
 public class MedicineController {
-
-	private static final String MOD_MEDICINES = "Medicines";
-	private static final String MEDICINE_DELETED_SUCCESSFULLY = "Medicine deleted successfully";
-	private static final String MEDICINE_ADDED_SUCCESSFULLY = "Medicine added successfully";
-	private static final String ADD_MEDICINE = "AddMedicine";
-	private static final String SEARCH_MEDICINE = "SearchMedicine";
-	private static final String MEDICINE_HOME = "MedicineHome";
 
 	static final Logger LOGGER = LoggerFactory
 			.getLogger(MedicineController.class);
@@ -25,22 +20,15 @@ public class MedicineController {
 	@Autowired
 	private MedicineService medicineService;
 
-	@RequestMapping("home")
+	@RequestMapping
 	public String renderMedicineHome() {
-		LOGGER.info("Rendering Medicine Home...");
-		return MEDICINE_HOME;
+		return ViewNames.MedicineHome.name();
 	}
 
-	@RequestMapping("addmedi")
-	public String renderAddMedicine() {
-		LOGGER.info("Rendering add medicine...");
-		return ADD_MEDICINE;
-	}
-
-	@RequestMapping("searchmedi")
-	public String renderSearchMedicine() {
-		LOGGER.info("Rendering Search Medicine...");
-		return SEARCH_MEDICINE;
+	@RequestMapping(value = "add")
+	public String addNew(MedicineDto medicineDto) {
+		medicineService.addNew(medicineDto);
+		return renderMedicineHome();
 	}
 
 }

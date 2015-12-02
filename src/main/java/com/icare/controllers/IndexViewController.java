@@ -12,16 +12,10 @@ public class IndexViewController {
 			.getLogger(IndexViewController.class);
 
 	public static final String ICARE = "ICare";
-	public static final String VISITS_HOME = "VisitsHome";
 
 	@RequestMapping(value = "index")
 	public String renderIndex() {
 		return ICARE;
-	}
-
-	@RequestMapping(value = "visitshome")
-	public String renderVisitsHome() {
-		return VISITS_HOME;
 	}
 
 }

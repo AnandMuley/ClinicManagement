@@ -58,7 +58,7 @@
 				<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="${pageContext.request.contextPath}/patient/appointment">Master Page</a></li>
-					<li><a href="${pageContext.request.contextPath}/patient/add">Medicine Detail</a></li>
+					<li><a href="${pageContext.request.contextPath}/medicine">Medicines</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">Password Setting</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">BackUp</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">About</a></li>

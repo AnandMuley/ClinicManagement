@@ -7,8 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import com.icare.dtos.AppointmentDto;
+import com.icare.dtos.MedicineDto;
 import com.icare.dtos.OpdCasePaperDto;
 import com.icare.entities.AppointmentBean;
+import com.icare.entities.Medicine;
 import com.icare.entities.OpdCasePaperBean;
 import com.icare.entities.PatientBean;
 
@@ -50,6 +52,14 @@ public class BeanCreatorUtil {
 		appointmentBean.setReferredBy(appointmentDto.getReferredBy());
 		appointmentBean.setSex(appointmentDto.getSex());
 		return appointmentBean;
+	}
+
+	public Medicine createMedicine(MedicineDto medicineDto) {
+		Medicine medicine = new Medicine();
+		medicine.setCode(medicineDto.getCode());
+		medicine.setMedicineType(medicineDto.getMedicineType());
+		medicine.setName(medicineDto.getName());
+		return medicine;
 	}
 
 }

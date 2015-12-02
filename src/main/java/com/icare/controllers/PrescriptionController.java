@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.icare.services.MedicineService;
-import com.icare.services.PrescriptionService;
 import com.icare.utils.ViewNames;
 
 @Controller
@@ -17,9 +16,6 @@ public class PrescriptionController {
 
 	static final Logger LOGGER = LoggerFactory
 			.getLogger(PrescriptionController.class);
-
-	@Autowired
-	private PrescriptionService prescriptionService;
 
 	@Autowired
 	private MedicineService medicineService;

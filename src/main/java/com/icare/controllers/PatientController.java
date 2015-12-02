@@ -16,7 +16,6 @@ import com.icare.entities.PatientBean;
 import com.icare.exceptions.NoDataFoundException;
 import com.icare.exceptions.PatientServiceException;
 import com.icare.services.PatientService;
-import com.icare.services.VisitService;
 import com.icare.utils.MessageConstants;
 import com.icare.utils.ViewNames;
 
@@ -29,9 +28,6 @@ public class PatientController {
 
 	@Autowired
 	private PatientService patientService;
-
-	@Autowired
-	private VisitService visitService;
 
 	@ModelAttribute("patient")
 	public PatientBean getPatientBean() {
