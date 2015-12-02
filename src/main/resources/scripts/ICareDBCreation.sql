@@ -21,10 +21,10 @@ USE `icare`;
 -- Table structure for table `patient`
 --
 
-DROP TABLE IF EXISTS `patient`;
+DROP TABLE IF EXISTS `patients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `patient` (
+CREATE TABLE `patients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mrdNo` VARCHAR(15) DEFAULT NULL,
   `name` varchar(150) DEFAULT NULL,
@@ -39,6 +39,20 @@ CREATE TABLE `patient` (
   `allergies` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `icare`.`appointments` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(200) NULL,
+  `age` INT NULL,
+  `sex` VARCHAR(6) NULL,
+  `contactNo` BIGINT(10) NULL,
+  `date` DATETIME NULL,
+  `address` VARCHAR(500) NULL,
+  `consultant` VARCHAR(200) NULL,
+  `referredBy` VARCHAR(200) NULL,
+  `appointmentscol` VARCHAR(200) NULL,
+  PRIMARY KEY (`id`));
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

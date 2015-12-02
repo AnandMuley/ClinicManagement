@@ -10,7 +10,10 @@ import org.slf4j.LoggerFactory;
 
 public class DateConverterUtil {
 
-	static final Logger LOGGER = LoggerFactory.getLogger(DateConverterUtil.class);
+	static final Logger LOGGER = LoggerFactory
+			.getLogger(DateConverterUtil.class);
+	public static final String YYYYMMDD = "yyyy-MM-dd";
+	public static final String DDMMMYYYY = "dd-MMM-yyyy";
 
 	public static String toString(Date date, String pattern) {
 		SimpleDateFormat format = new SimpleDateFormat(pattern);

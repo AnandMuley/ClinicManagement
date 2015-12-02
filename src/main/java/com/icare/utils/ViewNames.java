@@ -1,5 +1,5 @@
 package com.icare.utils;
 
 public enum ViewNames {
-	RegisterPatient, EditPatient, SearchPatient, BookAppointment, PatientQueue, SpectaclePrescription, CasePaper
+	RegisterPatient, EditPatient, SearchPatient, BookAppointment, PatientQueue, SpectaclePrescription, CasePaper, ViewAppointments
 }

@@ -1,13 +1,28 @@
-package com.icare.dtos;
+package com.icare.entities;
 
-public class AppointmentDto {
+import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(schema = "icare", name = "appointments")
+public class AppointmentBean {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
 	private long age;
 	private String sex;
 	private long contactNo;
-	private String date;
+	@Temporal(TemporalType.DATE)
+	private Date date;
 	private String address;
 	private String consultant;
 	private String referredBy;
@@ -52,11 +67,11 @@ public class AppointmentDto {
 		this.contactNo = contactNo;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -86,7 +101,7 @@ public class AppointmentDto {
 
 	@Override
 	public String toString() {
-		return "AppointmentDto [id=" + id + ", name=" + name + ", age=" + age
+		return "AppointmentBean [id=" + id + ", name=" + name + ", age=" + age
 				+ ", sex=" + sex + ", contactNo=" + contactNo + ", date="
 				+ date + ", address=" + address + ", consultant=" + consultant
 				+ ", referredBy=" + referredBy + "]";

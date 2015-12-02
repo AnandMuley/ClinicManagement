@@ -19,7 +19,8 @@
 					<li><a href="${pageContext.request.contextPath}/patient/add">Contact Lens Shop</a></li>
 					<li><a href="${pageContext.request.contextPath}/patient/add">Medical Certificate</a></li> --%>
 					<li><a href="${pageContext.request.contextPath}/prescription">Spectacle Prescription</a></li>
-					<li><a href="${pageContext.request.contextPath}/appointment">Appointment</a></li>
+					<li><a href="${pageContext.request.contextPath}/appointment">Book Appointment</a></li>
+					<li><a href="${pageContext.request.contextPath}/appointment/viewall">View Appointments</a></li>
 				</ul>
 			</li>
 			<%-- <li class="dropdown">

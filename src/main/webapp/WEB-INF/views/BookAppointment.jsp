@@ -13,7 +13,7 @@
 	<br>
 	<h3 class="text-info text-center">Book Appointment</h3>
 	<div align="center">
-		<form id="createAppointmentFrm" action="#" method="get">
+		<form id="createAppointmentFrm" action="appointment/book" method="post">
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
@@ -22,7 +22,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+						<input required="required" class="form-control input-group-lg" name="name"/>
 					</div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+						<input required="required" class="form-control input-group-lg" name="age"/>
 					</div>
 					<div class="col-md-6">
 								<select name="sex" class="form-control input-group-lg">
@@ -57,10 +57,10 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+						<input required="required" class="form-control input-group-lg" name="contactNo"/>
 					</div>
 					<div class="col-md-6">
-						<input required="required" type="date" class="form-control input-group-lg" ng-model="appointment.datedOn" placeholder="For Date"/>
+						<input required="required" type="date" class="form-control input-group-lg" name="date" placeholder="For Date"/>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<textarea class="form-control input-group-lg" rows="3" cols="40"></textarea>
+						<textarea name="address" class="form-control input-group-lg" rows="3" cols="40"></textarea>
 					</div>
 				</div>
 			</div>
@@ -87,13 +87,13 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<input required="required" class="form-control input-group-lg" ng-model="appointment.name"/>
+						<input required="required" class="form-control input-group-lg" name="consultant"/>
 					</div>
 					<div class="col-md-6">
-								<select name="sex" class="form-control input-group-lg">
+								<select name="referredBy" class="form-control input-group-lg">
 									<option value=""></option>
-									<option value="Male">Male</option>
-									<option value="Female">Female</option>
+									<option value="DoctorA">DoctorA</option>
+									<option value="DoctorB">DoctorB</option>
 								</select>
 					</div>
 				</div>
@@ -112,13 +112,23 @@
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-8">
-						<button ng-click="create(appointment)" class="btn btn-lg btn-primary btn-block" type="submit">CREATE</button>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">CREATE</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		</form>
 	</div>
-</div>
+	<br/>
+		<c:if test="${Message != null}">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div align="center" class="alert alert-success" role="alert">${Message}</div>
+				</div>
+			</div>
+		</c:if>
+	<br/>
+	</div>
 </body>
 </html>

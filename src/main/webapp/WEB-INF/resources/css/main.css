@@ -41,70 +41,83 @@
 	font-size: 40px;
 }
 
-.prescription-container{
+.prescription-container {
 	border: solid 1px #BCBCBC;
 	width: 70%;
 	margin-bottom: 100px;
 	padding: 30px;
 }
 
-.line-separator{
+.line-separator {
 	margin-top: 10px;
-	border-bottom:solid 1px #BCBCBC;
+	border-bottom: solid 1px #BCBCBC;
 	width: 100%;
 }
 
-.table-bordercolor{
+.table-bordercolor {
 	border: solid 1px;
 	border-color: #BCBCBC;
 }
 
-.disabled{
+.disabled {
 	color: gray !important;
 }
 
-.links{
+.links {
 	cursor: pointer;
 }
 
-.editBtn{
+.editBtn {
 	color: #deb73d;
 }
 
-.deleteBtn{
+.deleteBtn {
 	color: #bd1e13;
 }
 
-.opdpaper{
+.opdpaper {
 	color: #2e6fe3;
 }
 
-.text-label{
+.text-label {
 	font-weight: bold;
 	text-align: left;
 	padding-left: 20px;
 	margin: 5px;
 }
 
-.prescription-input{
-	border:none;
+.prescription-input {
+	border: none;
 	border-bottom: solid 1px #cacaca;
 }
 
-.label-text{
+.label-text {
 	font-weight: bold;
 }
 
-.pres-text-label{
+.pres-text-label {
 	text-align: right;
 	color: #44708F;
 	font-weight: bold;
 }
 
-.appointment-text-label{
+.appointment-text-label {
 	text-align: center;
 	color: #44708F;
 	font-weight: bold;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+.site-color {
+	color: #44708F;
+}
+
+.details-icon {
+	cursor: pointer;
+}
+
+.site-label {
+	font-weight: bold;
+	color: #44708F;
 }

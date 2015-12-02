@@ -9,15 +9,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import com.icare.constants.EyeType;
 import com.icare.converters.EyeTypeConverter;
 
-@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-@Component
 @Entity
 @Table(schema = "icare", name = "opdcasepaper")
 public class OpdCasePaperBean {
