@@ -3,7 +3,9 @@ package com.icare.utils;
 import org.springframework.stereotype.Component;
 
 import com.icare.dtos.AppointmentDto;
+import com.icare.dtos.MedicineDto;
 import com.icare.entities.AppointmentBean;
+import com.icare.entities.Medicine;
 
 @Component
 public class DtoCreatorUtil {
@@ -21,6 +23,15 @@ public class DtoCreatorUtil {
 		appointmentDto.setReferredBy(appointmentBean.getReferredBy());
 		appointmentDto.setSex(appointmentBean.getSex());
 		return appointmentDto;
+	}
+
+	public MedicineDto createMedicineDto(Medicine medicine) {
+		MedicineDto medicineDto = new MedicineDto();
+		medicineDto.setCode(medicine.getCode());
+		medicineDto.setId(medicine.getId());
+		medicineDto.setMedicineType(medicine.getMedicineType());
+		medicineDto.setName(medicine.getName());
+		return medicineDto;
 	}
 
 }
