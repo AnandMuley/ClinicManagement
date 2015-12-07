@@ -14,10 +14,22 @@
 	<%@include file="Header.jsp"%>
 	<br>
 	<h3 class="text-info text-center">View Appointments</h3>
+	<form action="${pageContext.request.contextPath}/appointment/search">
+		<div class="row">
+			<div class="col-md-5"></div>
+			<div class="col-md-2" align="left">	
+				<input required="required" type="date" class="form-control input-group-lg" name="date" placeholder="For Date"/>
+			</div>
+			<div class="col-md-2" align="left">	
+				<button class="btn btn-md btn-primary" type="submit">SEARCH</button>
+			</div>
+		</div>
+	</form>
+	<br/>
 	<div align="center">
 		<div class="row">
 			<div class="col-md-4"></div>
-			<div class="col-md-4">Appointments for date <fmt:formatDate pattern="dd-MMM-yyyy" value="${searchResults.forDate}"/> </div>
+			<div class="col-md-4 text-label">Appointments for date <fmt:formatDate pattern="dd-MMM-yyyy" value="${searchResults.forDate}"/> </div>
 		</div>
 	</div>
 	<br/>

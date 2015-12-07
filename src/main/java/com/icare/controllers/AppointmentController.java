@@ -1,5 +1,7 @@
 package com.icare.controllers;
 
+import java.text.ParseException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,20 @@ public class AppointmentController {
 			model.addAttribute("Message", e.getMessage());
 		}
 		return ViewNames.BookAppointment.name();
+	}
+
+	@RequestMapping(value = "search")
+	public String searchAppointment(
+			@ModelAttribute("date") String appointmentDate, Model model) {
+		AppointmentSearchDto appointmentSearchDto = new AppointmentSearchDto();
+		try {
+			appointmentSearchDto.setForDate(appointmentDate);
+			appointmentService.searchAppointments(appointmentSearchDto);
+			model.addAttribute("searchResults", appointmentSearchDto);
+		} catch (ParseException e) {
+			model.addAttribute("Message", e.getMessage());
+		}
+		return ViewNames.ViewAppointments.name();
 	}
 
 }
